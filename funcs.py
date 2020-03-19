@@ -8,4 +8,3 @@ print(items)
 print("filter():")
 items = [item for item in filter(lambda x: x<4, lst)]
 print(items)
-
