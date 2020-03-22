@@ -58,5 +58,70 @@ class HashTable:
     def put(self, key, value):
         item = HashItem(key, value)
         h = self._hash(key)
-        
+        '''
+        Once we kow the value of the key, It will be easy to dtore the elements at the key value.
+        Hence, we need to find an empty slot we start at the slot that corresponds to the hash value of the key.
+        If that slot is empty, we insert our item there.
 
+        However, if the slot is not empty and the key of the item is not the same as our current key,
+        then we have a collision.
+        One way of resolving this kind of collision is to find slot from the position of the collision;
+        this collision resolution process is called open addressing. We can do this by linearly looking
+        for the next available slo by adding 1 to the preiou hash value where we get the collision.
+        This systematic way of visiting each slot is a linear way of resolving collisions and is called
+        Linear probing.
+        '''
+        while self.slots[h] is not None:
+            if self.slots[h].key is key:
+                break
+            h = (h+1)%self.size
+
+        if self.slots[h] is None:
+            self.count += 1
+        self.slots[h] = item
+        
+    '''
+    To retrieve values from the hash table , the value stored corresponding to the key would be returned.
+    Here, we will see the implementation of the retrieval method - get()
+    
+    First we compute the hash value of the key then we look in the table for the key at computed hash value
+    if key item matches the stored key value at that location, the corresponding value is retrieved.
+    If that doesn't matches, we add 1 to the sum of the ordinal values of all the charcaters 
+    '''
+    def get(self, key):
+        h = self._hash(key) # compute hash for the given key
+        while self.slots[h] is not None:
+            if self.slots[h].key is key:
+                return self.slots[h].value
+            h = (h+1)% self.size
+        return None
+
+    def __setitem__(self, key, value):
+        self.put(key, value)
+
+    def __getitem__(self, key):
+        return self.get(key)
+'''
+Using the put() and get() methods doesn't look very convenient to use. However, we would have preffered
+our hashtable as a list, as it would be easier to use.
+
+This can be easily done with special methods, __setitem__() and __getitem__().
+
+'''
+
+ht = HashTable()
+ht.put("good", "eggs")
+ht.put("better", "ham")
+ht.put("best", "spam")
+ht.put("ad", "do not")
+ht.put("ga", "collide")
+
+for key in("good","better","best","worst", "ad","ga"):
+    print(ht.get(key))
+
+print("The no. of total elements is : {}".format(ht.count))
+
+'''
+Here we hae only used linear proing to deal with collisons but this is not the best solution.
+There areother strategies like chaining that we must look into.
+'''
