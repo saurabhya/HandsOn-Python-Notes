@@ -42,7 +42,7 @@ def quick_sort(unsorted_array, first, last):
         quick_sort(unsorted_array, partition_point+1, last)
 
 
-unordered_list = [8,5,3,9,2]
+unordered_list = [20,50,10,9,15,30,60]
 
 quick_sort(unordered_list,0, len(unordered_list)-1)
 print(unordered_list)
