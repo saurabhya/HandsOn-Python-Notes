@@ -51,12 +51,12 @@ def KMP_Matcher(text, pattern):
     for i in range(1, m+1):
         while q>0 and pattern[q+1] != text[i]:
             q = prefix_fun[q]
-            if pattern[q+1] == text[i]:
-                q += 1
-    if q == n:
+        if pattern[q+1] == text[i]:
+            q += 1
+        if q == n:
             print("Pattern occurs with shift",i-n)
             flag = True
-    if not flag:
+        if not flag:
             print("\n No match found")
 
 
