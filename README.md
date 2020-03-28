@@ -1,9 +1,7 @@
 # Handson data structures and algorithms in Python
 
-Recently I came around this book and started reading it, this book is helpful for people who are intersted in implementing data structures and algorithms in Python by Dr. Basant agarwal and Benjamin Baka.
- </br>
- Due to the corona virus outbreak I had to extend to my holidays so I have just tried to implement the codes given in the book. Codes have
- not been written with the focus towards a reader. I have tried to include as much comments as possible but there might be some places where
- you need to refer the book.
- </br>
- Book is very informative, so I would like to suggest this book to anyone who is looking to extend his knowledge of Python.
+ Due to the corona virus outbreak I had to extend to my holidays at my home. I started to read different Python books and in this repo I have tried to include some of the things from them.
+ </br></br>
+ I have tried include baseic implementation of diffeternt data types, classes and data models and different data structures and some important algorithms.
+ </br></br>
+ Some of the books I have followed are Handson data structures and algorithms in Python by Basant Agarwal, Fluent Python by luciano Ramalho and Python notes for professionals. I will try to add more to this repo if something seems interesting.
