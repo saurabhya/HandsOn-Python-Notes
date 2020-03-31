@@ -54,7 +54,7 @@ def bulk_item_promo(order):
     """
     discount = 0
     for item in order.cart:
-        if ite.quantity >= 20:
+        if item.quantity >= 20:
             discount += item.total() * .1
     return discount
 
@@ -66,3 +66,21 @@ def large_order_promo(order):
     if len(disctinct_items) >= 10:
         return order.total()*0.7
     return 0
+
+
+joe = Customer('Jon Doe', 0)
+ann = Customer('Ann Smith', 1100)
+cart = [LineItem('banana', 4, .5), LineItem('apple', 10, 1.5), LineItem('watermelon', 5, 5.0)]
+
+print(Order(joe, cart, fidelity_promo))
+print(Order(ann, cart, fidelity_promo))
+
+
+
+banana_cart = [LineItem('banana', 30, .5), LineItem('apple', 10, 1.5)]
+print(Order(joe, banana_cart, bulk_item_promo))
+
+long_order = [LineItem(str(item_code), 1, 1.0) for item_code in range(10)]
+
+print(Order(joe, long_order, large_order_promo))
+print(Order(joe, cart, large_order_promo))
