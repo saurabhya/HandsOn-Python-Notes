@@ -84,3 +84,56 @@ long_order = [LineItem(str(item_code), 1, 1.0) for item_code in range(10)]
 
 print(Order(joe, long_order, large_order_promo))
 print(Order(joe, cart, large_order_promo))
+
+"""
+    Now that we have implemented the strategy pattern with functions, other possibilities emerge. Suppose you
+    want to create  a "mets-strategy" thaht selects the best available, discount for a given Order.
+
+    Implementing best_promo
+"""
+
+promos = [fidelity_promo, bulk_item_promo, large_order_promo]
+
+def best_promo(order):
+    """
+        Select best discount available
+    """
+    return max(promo(order) for promo in promos)
+
+"""
+    Finding Strategies in Module
+
+        Modules in Oython are also first-class objects, and the standard library provides sevral functions to handle them. the built-in globals is
+        described as follows in the Python docs:
+        globals():
+            return a dictionary representing the current global symbol table. this is always the dictionary of the current module
+            (inside a function or method, this is the module where it is defined, not the module from which it is called)
+
+            Now we will see a somewhat hackish way of using global to help best_promo automatically find the other available
+            *_promo functions.
+"""
+
+promos = [globals()[name] for name in globals()
+            if name.endswith('_promo') and name != 'best_promo'] # Iterate over each name in the dictionary returned by globals()
+
+def best_promo(order):
+    return max(promo(order) for promo in promos)
+
+
+"""
+    Another way of collecting the availbale promotions would be to create a module and put all the strategy
+    functions there, except for best_promo.
+
+
+    The only significant change is that the list of strategy functions is built by introspection of a separate
+    module called promotions.
+
+    Here, we depend on importing the promotions module as well as inspect, which provides high-level introspection functions
+
+    promos = [func for name, func in inspect.getmembers(promotions, inspect.isfunction)]
+
+    def best_promo(order):
+        return max(promo(order) for promo in promos)
+
+"""
+
