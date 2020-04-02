@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
 """
     Note that register runs before any other function in the module. When register is called, it receives as an
-    argument the function object being decorated
+    argument the function object being decorated.
 
 
 """
