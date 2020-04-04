@@ -46,7 +46,7 @@ print(fibonacci(6))
     information from the web.
     It's important to note that lru_cache can be tuned by passing two optional arguments.Its full signature is:
 
-    fuctools.lru_cache(maxsiz128, typed=False)
+    fuctools.lru_cache(maxsize=128, typed=False)
 
     The maxsize argument determines how many call results are stored. After the cache is full, older results are discarded
     to make room. For optional performance, axsize should be a power of 2. The typed argument, if set to True, stores results
