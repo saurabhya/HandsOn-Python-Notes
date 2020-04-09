@@ -48,3 +48,7 @@ class Vector2d:
 
     def __bool__(self):
         return bool(abs(self))
+"""
+    Method _eq_ works for vector2d operands but also returns True when comparing vector2d instnaces to other
+    iteratables holding the same numeric values (e.g. vector(3,4) == [3,4]).
+"""
