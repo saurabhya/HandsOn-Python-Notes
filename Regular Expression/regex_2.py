@@ -55,7 +55,7 @@ for string in strings:
     print(string)
 
 """
-    The parantesis() group mechanism can be combined with findall().
+    The paranthesis() group mechanism can be combined with findall().
     If the pattern includes 2 or more paranthesis groups, then instead of returning
     a list of strings, findall() returns a list of *tuples*. Each tuple represents
     one match of the pattern, and inside the tuple is the group(1), group(2).. data.
