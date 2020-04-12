@@ -44,3 +44,63 @@ import urllib.parse
 
 url = 'https://www.google.com/search'
 values = {'q':'python tutorials'}
+
+"""
+    Above, we're defining the variables that we plan to POST to the url we apecify.
+    From there, below, we're needing to first url encode all of the values.
+    This is basically things like converting "spaces" to %20, for example
+
+    Then we encode to the utf-8 bytes. We make our request,
+    by adding in one more value, data, which is the encoded dictionary of keys
+    and values, or better understood in this scenario as variables and
+    their values. Then we open the url with the request that we've built,
+    which we call a response, since that's what we get with it. Finally, we read
+    that response with a.read().
+"""
+data = urllib.parse.urlencode(values)
+data = data.encode('utf-8') # data should be in bytes
+#req = urllib.request.Request(url, data)
+#resp = urllib.request.urlopen(req)
+#respData = resp.read()
+
+#print(respData)
+
+"""
+    Whenever you visit a link, you send in a header, which is just some basic information
+    about you. This is how Google Analytics knows what browser you are using.
+
+    Within the header, there is a value called user-agent, which defines the browser
+    that is accessing the website's server.
+    If you are using the default python user-agent with urllib, then you are announcing
+    yourself as Python-urllib/3.4, if Python version is 3.4. This is either foreign to
+    the website, or they will just block it entirely. A work around for this is to just
+    identify yourself as something else.
+"""
+try:
+    x = urllib.request.urlopen('https://www.google.com/search?q=test')
+    #print(x.read())
+    savefile = open('noheaders.txt', 'w')
+    savefile.write(str(x.read()))
+    savefile.close()
+except Exception as e:
+    print(str(e))
+
+"""
+    The above output is from Google, who knows you are Python. Over the years, how Google
+    and other websites have handled programs has changed, so this might change as well in time.
+    The current response they are giving is just a default search page, once you parse through
+    all the mess of code that is returned.
+
+"""
+try:
+    url = 'https://www.google.com/search?q=python'
+    headers = {}
+    headers['User-Agent'] = "Mozilla/5.0 (X11; Linux i686)"
+    req = urllib.request.Request(url, headers=headers)
+    resp = urllib.request.urlopen(req)
+    respData = resp.read()
+    savefile = open('withheaders.txt', 'w')
+    savefile.write(str(respData))
+    savefile.close()
+except Exception as e:
+    print(str(e))
