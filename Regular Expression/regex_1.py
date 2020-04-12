@@ -22,7 +22,7 @@ else:
     which passes through backslashes without change which is very handy for
     regular expressions.
 
-    The power o fregular expressions id that they can specify patterns
+    The power of regular expressions id that they can specify patterns
     not just fixed characters. Here are the most basic patterns which match
     single chars:
     1. a,X,9 <- ordinary characters just match themselves exactly. The meta-
@@ -74,3 +74,16 @@ str = 'purple alice-b@google.com monkey dishwasher'
 match = re.search(r'\w+@\w+', str)
 if match:
     print( match.group())
+
+
+"""
+    Square brackts can be used to indicate a set of chars, so [abc] matches
+    'a' or 'b' or 'c'. The codes \w, \s etc. work inside square brackets too
+    with the one exception that dot(.) just means a literal dot. For the email
+    problem, the square brackets are an easy way to add '.' and '-' to the set
+    of chars which can appear around the @ with the pattern r'[\w._]+@[\w.-]+'
+    to get the whole email address.
+"""
+match = re.search(r'[\w._]+@[\w.-]+', str)
+if match:
+    print(match.group())
