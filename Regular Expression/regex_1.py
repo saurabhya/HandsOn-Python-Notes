@@ -84,6 +84,6 @@ if match:
     of chars which can appear around the @ with the pattern r'[\w._]+@[\w.-]+'
     to get the whole email address.
 """
-match = re.search(r'[\w._]+@[\w.-]+', str)
+match = re.search(r'[\w.-]+@[\w.-]+', str)
 if match:
     print(match.group())
