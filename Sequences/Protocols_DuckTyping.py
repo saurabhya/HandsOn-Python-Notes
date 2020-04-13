@@ -3,7 +3,7 @@
     in documentation and not in code. For example, the seuence protocol in Python entails just the
     __len__ and __getitem__ methods. Any class Spam that implements those methods with the standard
     signature and semantics can be used anywhere a sequence is exected.
-    Whether Spam is a subclass o this or that is irrelevant; all that
+    Whether Spam is a subclass of this or that is irrelevant; all that
     matters is that it provides the necesary methods.
 """
 import collections
