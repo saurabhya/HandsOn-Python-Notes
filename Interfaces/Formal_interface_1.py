@@ -45,4 +45,4 @@ class EmlParserNew:
 """
     If you run issubclass() on PdfPaserNew and EmlParsernew, then
     issubclass() will return True and False, respectively.
-"""'
+"""
