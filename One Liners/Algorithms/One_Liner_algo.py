@@ -58,3 +58,46 @@ print("Output of levenshtein distance: ")
 print(ls(a,b))
 print(ls(b,c))
 print(ls(a,c))
+
+print("\n")
+
+# Calculating the powerset
+
+# we will be using reduce function
+from functools import reduce
+# Original Set
+s = [1,2,3]
+
+ps = lambda s: reduce(lambda P, x: P+[subset | {x} for subset in P], s,[set()])
+
+# Now check the result
+print("Output of powerset: ")
+print(ps(s))
+
+print("\n")
+
+# Caesar's cipher encryption
+# ROT13 algorithm
+
+# Original string
+abc = "abcdefghijklmnopqrstuvwxyz"
+s = "xthexrussiansxarexcoming"
+
+rt13 = lambda x: "".join([abc[(abc.find(c)+13)%26] for c in x])
+
+# Now check the result
+print("Output of the caesar's cipher: ")
+print(rt13(s))
+print(rt13(rt13(s)))
+
+print("\n")
+
+# Finding prime numbers
+# find all prime numbers <= m
+n = 20
+
+primes = reduce(lambda r,x: r-set(range(x**2, n, x)) if x in r else r, range(2, int(n**0.5)+1), set(range(2,n)))
+
+print("Output of the prime numbers: ")
+print(primes)
+
