@@ -101,3 +101,46 @@ primes = reduce(lambda r,x: r-set(range(x**2, n, x)) if x in r else r, range(2, 
 print("Output of the prime numbers: ")
 print(primes)
 
+print("\n")
+
+
+# Calculating fibonacci series
+# we will be using reduce()
+
+n = 10
+fibs = reduce(lambda x, _: x+[x[-2]+x[-1]], [0]*(n-2), [0,1])
+
+# now chwck the result
+print("Result of fibonacci series: ")
+print(fibs)
+
+print("\n")
+
+
+# Recursive binary search
+# rerturn index where element is found else return -1
+l = [ 3, 6, 14, 16, 33, 55, 56, 89]
+x = 33
+# search for x in l
+
+bs = lambda l, x, lo, hi: -1 if lo>hi else\
+    (lo+hi)//2 if l[(lo+hi)//2]==x else\
+        bs(l,x, lo, (lo+hi)//2-1) if l[(lo+hi)//2]>x else\
+            bs(l, x, (lo+hi)//2+1, hi)
+
+# Now check the result
+print("Output of the recursive binary search: ")
+print(bs(l, x, 0, len(l)-1))
+
+print("\n")
+
+
+# Recusrive quicksort algortihm
+# return sorted list
+unsorted = [33, 2, 3, 45, 6, 54, 33]
+
+q = lambda l: q([x for x in l[1:] if x<= l[0]])+ [l[0]] + q([x for x in l if x > l[0]]) if l else []
+
+# Now check the result
+print("Output of the recusrive quicksort algorithm: ")
+print(q(unsorted))
