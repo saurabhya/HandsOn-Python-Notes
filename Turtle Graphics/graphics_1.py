@@ -1,4 +1,4 @@
-# here is a tyrtle graaphics Ninja twist
+# here is a turtle graphics Ninja twist
 
 import turtle
 
