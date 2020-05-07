@@ -18,7 +18,7 @@ print(state_capitals)
 print(state_capitals['Alaska'])
 print(state_capitals)
 
-# ANother example with int
+# Another example with int
 fruit_counts = collections.defaultdict(int)
 
 fruit_counts['apple'] += 2 # No errors should occur
