@@ -26,7 +26,7 @@ turtle.clearscreen()
 # Circle
 """
     I you attempt to draw a circle as you drew square then you'd have to spend a lot of time just for that one
-    shape. Thankfully, turtle library provides a solution for this. You canuse a single commandto draw the circle.
+    shape. Thankfully, turtle library provides a solution for this. You can use a single command to draw the circle.
 """
 t.setposition(0,0)
 t.circle(60)
@@ -36,14 +36,10 @@ time.sleep(3)
 turtle.clearscreen()
 
 """
-    In the same way, you can also draw a dot, which is nothing but a filled-i circle.
+    In the same way, you can also draw a dot, which is nothing but a filled-in circle.
 """
+t.setposition(0,0)
 t.dot(60)
-
-
-time.sleep(3)
-turtle.clearscreen()
-
 
 
 turtle.done()

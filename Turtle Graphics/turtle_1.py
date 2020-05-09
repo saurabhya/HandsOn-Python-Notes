@@ -7,8 +7,8 @@
 import turtle
 
 """
-    Since turtle is a grphic library, which means you'll need to create a separate window to ccaeey out each drawing
-    command . You can create this screen by initializing a variable for it.
+    Since turtle is a grphic library, which means you'll need to create a separate window to carryy out each drawing
+    command. You can create this screen by initializing a variable for it.
 """
 s = turtle.getscreen()
 
