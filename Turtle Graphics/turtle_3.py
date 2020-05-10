@@ -81,7 +81,7 @@ t.color("green", "red")
 
 # Coloring in an image usually makes it look better, doesn't it? The Python turtle library gives you the option
 # to add color to your drawings.
-turtle.clearscreen()
+t.clear()
 t.home()
 
 t.begin_fill()
@@ -115,7 +115,7 @@ turtle.bgcolor("green")
 
 
 # *Customizing in one line
-turtle.clearscreen()
+t.clear()
 t.pen(pencolor="purple", fillcolor="orange", pensize=10, speed=9)
 t.begin_fill()
 t.circle(90)
