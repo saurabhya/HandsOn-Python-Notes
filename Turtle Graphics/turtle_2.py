@@ -20,8 +20,8 @@ t.rt(90)
 t.fd(100)
 
 
-time.sleep(3)
-turtle.clearscreen()
+time.sleep(1)
+t.reset()
 
 # Circle
 """
@@ -32,14 +32,42 @@ t.setposition(0,0)
 t.circle(60)
 
 
-time.sleep(3)
-turtle.clearscreen()
+time.sleep(1)
+t.reset()
 
 """
     In the same way, you can also draw a dot, which is nothing but a filled-in circle.
 """
 t.setposition(0,0)
 t.dot(60)
+
+time.sleep(1)
+t.reset() # resetting turtle to its original place
+
+
+# Star
+
+
+
+# using loop
+for i in range(5):
+    t.fd(50)
+    t.rt(144)
+
+time.sleep(1)
+t.reset() # resetting turtle to its original place
+
+
+# Hexagon
+
+num_sides = 6
+side_length = 70
+angle = 360.0/num_sides
+
+# using loop
+for i in range(num_sides):
+    t.fd(side_length)
+    t.rt(angle)
 
 
 turtle.done()
