@@ -1,6 +1,6 @@
 """
     Collections.OrderdDict()
-        The order of key sin Python dictionories is arbitrary, they are not governed by the order in which you add them.
+        The order of keys in Python dictionories is arbitrary, they are not governed by the order in which you add them.
 """
 d = {'foo': 5, 'bar': 6}
 print(d)

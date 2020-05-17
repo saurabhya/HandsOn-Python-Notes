@@ -1,7 +1,7 @@
 
 """
     collections.defaultdict(default_factory) returns a subclass of dict that has a default value for missing keys. The argument should be a function
-    that returns the default value when called woth no arguments. If there is nothing passed, it defaults to None.
+    that returns the default value when called with no arguments. If there is nothing passed, it defaults to None.
 """
 import collections
 state_capitals = collections.defaultdict(str)
