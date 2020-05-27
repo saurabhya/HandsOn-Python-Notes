@@ -3,7 +3,7 @@ import re
 # match = re.search(pat, str)
 
 """
-    The re.search() method takes a regular expression patter and a string and
+    The re.search() method takes a regular expression pattern and a string and
     searches for that pattern within the string. If the search is successful,
     search() returns a match object or None otherwise. Therefore, the search
     is usually immediately followed by an if-statement to test if the search
