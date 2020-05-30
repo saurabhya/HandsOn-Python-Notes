@@ -19,6 +19,7 @@ class HauntedBus:
 
     def drop(self, name):
         self.passengers.remove(name)
+
 # Following shows the eerie behavior of the HauntedBus.
 bus1 = HauntedBus(['Alice', 'Bill'])
 print(bus1.passengers)
@@ -30,9 +31,11 @@ print(bus1.passengers)
 bus2 = HauntedBus()
 bus2.pick('Carrie')
 print(bus2.passengers)
+
 # Bus2 starts empty, so the default empty list is assigned to self.passengers.
 bus3 = HauntedBus()
 print(bus3.passengers)
+
 # The default is no longer empty
 bus3.pick("Dave")
 print(bus2.passengers)
@@ -54,6 +57,7 @@ print(bus1.passengers)
     So if a default value is mutable object, and you change it, the change will affect every future call of the function.
     You can inspect the HauntedBus.__init object  and see the ghost students haunting its __default__ attributes:
 """
+
 print(dir(HauntedBus.__init__))
 print(HauntedBus.__init__.__defaults__)
 
