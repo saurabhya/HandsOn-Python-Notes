@@ -48,10 +48,12 @@ class Bus:
 
     def drop(self, name):
         self.passengers.remove(name)
+
 """
-    Now we will crete a bus object (bus1) and two clones -  a shallow copy(bus2) and a deep copy (bus3) - to observe
+    Now we will crete a bus object (bus1) and two clones - a shallow copy(bus2) and a deep copy (bus3) - to observe
     what happens as bus1 drops off a student.
 """
+
 import copy
 bus1 = Bus(['Alice', 'Bill','Claire', 'David'])
 bus2 = copy.copy(bus1)
@@ -67,6 +69,7 @@ print(bus3.passengers)
     would cause a naive algorithm to enter an infinte loop. The deepcopy function remembers the objects already copied
     to handle cyclic references garcefully.
 """
+
 a = [10,20]
 b = [a,30]
 a.append(b)
