@@ -3,7 +3,7 @@
     whether the caller expects the argument passed to be changed.
 
     For example, if your function recieves a dict and needs to modify it while processing it,
-    should this side effect be visible outside the function or not? Acutally it depends on the context. It's really
+    should this side effect be visible outside the function or not? Actually it depends on the context. It's really
     a matter of aligning the expectation of the coder of the function and that of the caller.
     Following example of TwilightBus tries to show this.
 """
