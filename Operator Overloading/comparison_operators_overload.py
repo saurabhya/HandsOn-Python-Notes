@@ -1,5 +1,5 @@
 """
-    The handlin of the rich comparison operators ++, !=, >, <, <=, >=
+    The handling of the rich comparison operators ++, !=, >, <, <=, >=
     by the Python interpreter is similar to what we just saw, but differs
     in two important aspects:
     1. The same set of methods are used in forward and reverse operator calls.
@@ -98,12 +98,12 @@ class Vector:
     """
         t3 = (1,2,3)
         va == t3 # true
-        is probably not desirable. I really have no hard rule about this; it depends on the application
-        context.
+        is probably not desirable. I really have no hard rule about this;
+        it depends on the application context.
         Taking a clue from Python itself, we can see that [1,2] == (1,2)
         is False. Therfore, let's be conservative and do some type checking.
         If the second operand is a vector instance, then use the same logic as the current __eq__.
-        Otherwise, return NotImplemented and let Pytho handle that.
+        Otherwise, return NotImplemented and let Python handle that.
 
         How about !=? we don't need to implement it because the fallback behavior of the __ne__
         inherited from object suits us: when __eq__ is defined and does not return NotImplemented,
