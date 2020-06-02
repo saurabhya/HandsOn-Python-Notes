@@ -1,11 +1,11 @@
 """
     Operator overloading allows user-defined objects to interpolate with infix operators
     such as + and | or unary operator like - and ~. More genrally, function invocation(()),
-    attribute access(.), and item access/slicing([]) are laso operators in Python but we wil
+    attribute access(.), and item access/slicing([]) are also operators in Python but we wil
     only deal with unary and infix operators here.
 
     Operator overloading has a bad name in some circles. It is a language feature that can be
-    abused, resulting in programmer connfusion, bugs and unexpected performance bottlenecks.
+    abused, resulting in programmer confusion, bugs and unexpected performance bottlenecks.
     But if well used/ it leads to pleasurable APIs and readable code. But in Pythom there are some
     limitations:
     1. We cannot overload operators for built-in types.
@@ -15,13 +15,13 @@
     In The Python language Reference, "6.5 Unary arithmetic and bitwise operations" lists
     three unary operators:
 
-    -(__neg__): Arithmetic unary negative. if x -s -2 then -x == 2
+    - (__neg__): Arithmetic unary negative. if x -s -2 then -x == 2
 
-    +(__pos__): Arithmetic unary plus. Usually x == +x, but there are few cases where this is not true.
+    + (__pos__): Arithmetic unary plus. Usually x == +x, but there are few cases where this is not true.
 
-    ~(__invert__): Bitwise inverse of an integer, defined as ~x == -(x+1). if x is 2 then ~x == -3.
+    ~ (__invert__): Bitwise inverse of an integer, defined as ~x == -(x+1). if x is 2 then ~x == -3.
 
-    It's easy to upport the unary operators. Simply implement the appropriate special method, which will
+    It's easy to support the unary operators. Simply implement the appropriate special method, which will
     recieve just one argument: self. Use whatever l0gic makes sense in ypur class, but stick o the fundamental
     rule of operators: always rreturn a new object. In other words, do not modify self,
     but create and return a new instance of a suitable type.
