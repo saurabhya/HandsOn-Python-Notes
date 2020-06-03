@@ -1,5 +1,5 @@
 """
-    Here we will perform addition of two euclidean vectors that will result in a new ector in which
+    Here we will perform addition of two euclidean vectors that will result in a new vector in which
     the components are the pairwise additions of the components of the addends.
 """
 from array import array
