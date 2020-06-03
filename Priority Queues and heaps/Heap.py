@@ -1,7 +1,7 @@
 '''
 A priority queue is a data structure which is simialar to the queue and stack data structures that stores data along
 with priority associated with it. In the priority queue, the item with the highest priority is served first.
-priority queues are often implemented using heap, simce it is very efficient for this purpose; however, it can be implemented using
+Priority queues are often implemented using heap, since it is very efficient for this purpose; however, it can be implemented using
 other data structures. It is a modified queue that returns the items in the order of highest priority, whereas the queue
 returns the items in the order they were added.
 
@@ -9,7 +9,7 @@ A heap is a data structure that satisfies a heap property. A heap property state
 between a parent node and its child nodes. This property must apply throughout the entire heap.
 In a min heap, the relationship between parent and children is that the value at the parent must always be less than
 or equal to its children. As a consequence of this, the lowest element in the heap must be the root.
-In max heap, on the other hand, the parent is grater than or equal to its children. It follows from this tha the largest value
+In max heap, on the other hand, the parent is greater than or equal to its children. It follows from this that the largest value
 makes up root node.
 
 The heaps are binary trees, and although we are going to use a binary tree, we will actually use a list to represent it.
@@ -40,13 +40,13 @@ class Heap:
         self.heap.append(item)
         self.size += 1
         self.arrange(self.size)
-    
+
     '''
-    the pop operation operation removes an element from the heap. The reason for remving an element from the min-heap is,
+    The pop operation operation removes an element from the heap. The reason for removing an element from the min-heap is,
     first , to find out the index of the item to be deleted, and then organise the heap so that it satisfies the heap property.
     however, it is more common to pop off the minimum value from the min heap, and as per the property of the min-heap,
     we can get the minimum value from its root value. Therefore to obtain minimum value, we remove the root node and
-    re-organise all the nodes of the heap. We also decreent the size of the heap by one.
+    re-organise all the nodes of the heap. We also decrement the size of the heap by one.
 
     however, once the root has been popped off, we need a new root node. For this, we just take the last item from the list and make
     the new root node. However, the selected node may not be the lowest element in the heap, so we need to reorganise the nodes
