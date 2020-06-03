@@ -78,7 +78,7 @@ class Vector:
         return self*other
     """
         These methods do work, except when provided with incompatible operands.
-        The scalar srgument has to be a number that when multiplied by a float
+        The scalar argument has to be a number that when multiplied by a float
         produces another float. So a complex number will not do, but the scalar
         can be an int, a bool(because bool is a subclass of int) or even
         a fractions.Fraction instance.
