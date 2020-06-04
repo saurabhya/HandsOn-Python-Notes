@@ -20,4 +20,13 @@ print(iter([1,2,3,4]))
     then advancing each itertor returned by iter() with next() and aggergating into the tuples.
     The iterator returned by zip() iterates over these tuples.
 
+    The map() built-in function is another "itertools operator" that, in its simplest form,
+    appliees a single-parameter function to each element of an iterable on element at a time.
+"""
+print(list(map(len, ['abc', 'de', 'fghi'])))
+
+"""
+    The map() function works by calling iter() on its argument, advancing this iterator with next()
+    until the iterator is exhausted, and applying the function passed to its first argument to the
+    value returned by next() at each step()
 """
