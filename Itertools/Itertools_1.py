@@ -9,3 +9,15 @@
 """
 
 print(list(zip([1,2,3],['a', 'b', 'c'])))
+
+"""
+    The iter() built-in function, when called on an iterables, returns an iterator object for that iterable:
+"""
+print(iter([1,2,3,4]))
+
+"""
+    Under the hood, the zip() function works, in essence, by calling iter() on each of its arguments,
+    then advancing each itertor returned by iter() with next() and aggergating into the tuples.
+    The iterator returned by zip() iterates over these tuples.
+
+"""
