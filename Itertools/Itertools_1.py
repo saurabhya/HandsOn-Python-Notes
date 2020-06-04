@@ -28,5 +28,18 @@ print(list(map(len, ['abc', 'de', 'fghi'])))
 """
     The map() function works by calling iter() on its argument, advancing this iterator with next()
     until the iterator is exhausted, and applying the function passed to its first argument to the
-    value returned by next() at each step()
+    value returned by next() at each step().
+
+    Since the iterators are iterable, you can compose zip() and map() to produce an iterator over
+    combinations of elements in more than one iterable.
+"""
+print(list(map(sum, zip([1,2,3], [4,5,6]))))
+
+"""
+    This is what is meant by the functions in itertools forming an "iterator algebra".
+    Itertools is best viewed as a collection of building blocks that can be combined to form
+    specialized "data pipelines" like the one inthe example above.
+
+    There are two main reasons why such an "itertor algebra" is useful: improved memory efficiency
+    (via lazy evaluation) and faster execution time.
 """
