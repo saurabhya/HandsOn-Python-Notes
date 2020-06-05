@@ -27,3 +27,12 @@ x = [1,2,3,4,5]
 y = ['a', 'b', 'c']
 print(list(zip(x, y)))
 print(list(it.zip_longest(x,y)))
+
+"""
+    A choice of k things from a set of n things is called a combination, and itertools has your back here.
+    The itertools.combinations() functions takes two arguments - an iterable inputs and a positive
+    integer n - and produces an iterator over tuples of all combinations of n elements in inputs.
+"""
+bills = [20, 20, 20, 10, 10, 10 , 10, 1, 1, 1, 1, 1]
+
+print(list(it.combinations(bills, 3)))
