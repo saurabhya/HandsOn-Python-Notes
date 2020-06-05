@@ -36,3 +36,10 @@ print(list(it.zip_longest(x,y)))
 bills = [20, 20, 20, 10, 10, 10 , 10, 1, 1, 1, 1, 1]
 
 print(list(it.combinations(bills, 3)))
+
+"""
+    A variation of combination is combinations_with_replacement() that roks like combination(), accepting an iterable
+    inputs and a positive integer n, and returns an iterator over n-tuples of elements from inputs.
+    The difference is that combinations_with_replacement() allows elements to be repeated in tuples it returns.
+"""
+print(list(it.combinations_with_replacement([1,2], 2)))
