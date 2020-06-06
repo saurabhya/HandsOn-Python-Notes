@@ -43,3 +43,9 @@ print(list(it.combinations(bills, 3)))
     The difference is that combinations_with_replacement() allows elements to be repeated in tuples it returns.
 """
 print(list(it.combinations_with_replacement([1,2], 2)))
+
+"""
+    Another itertools function is permutations(), which accepts a single iterable and produces all possible
+    permutations (rearrangements) of its elements.
+"""
+print(list(it.permutations(['a', 'b', 'c', 'd'])))
