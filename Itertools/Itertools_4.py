@@ -43,3 +43,12 @@ all_twos = it.repeat(2)
 """
 five_ones = it.repeat(1, 5)
 five_twos = it.repeat(4, 3)
+
+"""
+    There's an easy way to generate this sequence with the itertools.cycle() function.
+    This function takes an iterable inputs as an argument and returns an infinte iteratot
+    over the values in inputs that returns an infinte iterator over the values in inputs
+    that returns to the beginning once the end of inputs is reached. So, to produce the
+    alternating sequence of 1s and -1s, you could do this:
+"""
+alternating_ones = it.cycle([1, -1])
