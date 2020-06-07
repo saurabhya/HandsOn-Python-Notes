@@ -52,3 +52,30 @@ five_twos = it.repeat(4, 3)
     alternating sequence of 1s and -1s, you could do this:
 """
 alternating_ones = it.cycle([1, -1])
+
+"""
+    The goal of this part is to produce a single function that can generate any first order
+    recurrence relation - just pass it P, Q, and an initial value. One way to do this is with
+    itertools.accumulate().
+
+    The accumulate() function takes two arguments - an iterable inputs and a binary function func()
+    - and returns an iterator over accumulated results of applying func to elements of inputs.
+    It is rouughly equivalent to the following generator:
+"""
+def accumulate(inputs, func):
+    itr = iter(inputs)
+    prev = next(itr)
+    for cur in itr:
+        yield prev
+        prev = func(prev, cur)
+
+# For example
+import operator
+print(list(it.accumulate([1,2,3,4,5], operator.add)))
+
+"""
+    The second argument of accumulate() defaults to operator.add(),
+    so the previous example can be simplified to:
+    list(it.accumulate([1,2,3,4,5]))
+    [1,3,6,10,15]
+"""
