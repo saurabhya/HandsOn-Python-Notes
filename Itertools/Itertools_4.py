@@ -78,4 +78,24 @@ print(list(it.accumulate([1,2,3,4,5], operator.add)))
     so the previous example can be simplified to:
     list(it.accumulate([1,2,3,4,5]))
     [1,3,6,10,15]
+
+
+    Pasing the built-in min() to accumulate() will keep track of a running minimum
 """
+print(list(it.accumulate([9,21,17,5,11,12,2,6], min)))
+
+"""
+    More complex function scan be passed to accumulate() with lambda expressions
+"""
+print(list(it.accumulate([1,2,3,4,5], lambda x, y: (x+y)/2)))
+
+"""
+    THe order of the arguments in the binary function passed to accumulate() is important.
+    The first argument is always the previously accumulated result and the argument is always
+    the next element of the input iterable. For example, consider the diference in output of
+    the following expressions:
+"""
+
+print(list(it.accumulate([1,2,3,4,5], lambda x, y: x-y)))
+
+print(list(it.accumulate([1,2,3,4,5], lambda x, y: y-x)))
