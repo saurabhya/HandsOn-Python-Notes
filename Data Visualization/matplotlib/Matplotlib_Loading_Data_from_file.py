@@ -29,3 +29,19 @@ plt.show()
 """
 
 # -------------------------------------------------------------------------------------------------------------- #
+
+"""
+    While using the CSV module is completely fine, using the NumPy module to load our files
+    and data is likely to make more sense for us down the line.
+"""
+
+import numpy as np
+
+x,y = np.loadtxt("./Data Visualization/matplotlib/example.txt", delimiter=',', unpack=True)
+plt.plot(x,y, label='Loaded from file!')
+
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title("Interesting Graph")
+plt.legend()
+plt.show()
