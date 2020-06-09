@@ -17,12 +17,25 @@ working = [7,8,7,2,2]
 playing = [8,5,7,8,13]
 
 """
+    The problem is, we don't really know which color is which without looking back at the code.
+    The next problem is with polygons, we cannot actyally have "labels" for the data.
+    So anywhere where there is more than just a line, with things like fills or stckplots like this,
+    we cannot label the specific part inherently. We can work around it.
+"""
+plt.plot([],[],color='m',label='Sleeping', linewidth= 5)
+plt.plot([],[],color='c',label='Eating', linewidth= 5)
+plt.plot([],[],color='r',label='Working', linewidth= 5)
+plt.plot([],[],color='k',label='Playing', linewidth= 5)
+
+
+"""
     So, our "x" axis will consist of the days variable, which is 1,2,3,4 and 5.
     Then, our constituent for the days are held in their respective activities. To plot them:
 """
-plt.stackplot(days, eating, sleeping, working, playing)
+plt.stackplot(days, sleeping, eating, working, playing, colors=['m','c','r','k'])
 
 plt.xlabel("X")
 plt.ylabel("Y")
 plt.title('Interesting Graph')
+plt.legend()
 plt.show()
