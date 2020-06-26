@@ -5,14 +5,14 @@ class Employee(object):
         self.name = 0
         self.rate = rate
         Employee.numEmployee += 1
-    
+
     def __del__(self):
         Employee.numEmployee -= 1
-    
+
     def hours(self,numHours):
         self.owed += numHours*self.rate
         return ("%.2f hours worked" %numHours)
-    
+
     def pay(self):
         self.owed = 0
         return ("payed %s"%self.name)
@@ -28,7 +28,7 @@ class specialEmployee(Employee):
 
 ####################################################################################################################
 
-# Example : issubclass() to check whether a class is a subclass of another class 
+# Example : issubclass() to check whether a class is a subclass of another class
 # Example : isinstance() to check if an object belongs to a class or not
 
 print(issubclass(specialEmployee, Employee))
