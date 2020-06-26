@@ -1,7 +1,7 @@
 # Dictionary for text analysis
 '''
-Following code creates a dictionary where wach word in the text is used as a key
-and the number of occurences as its values.
+    Following code creates a dictionary where each word in the text is used as a key
+    and the number of occurences as its values.
 '''
 def wordcount(fname):
     try:
@@ -21,4 +21,4 @@ def wordcount(fname):
     return count
 
 count = wordcount("C:\Users\Saurabh\Desktop\editor\.vscode\HandsonDataStructuresandAlgorithmsin Python\ test.txt")
-print(count) 
+print(count)
