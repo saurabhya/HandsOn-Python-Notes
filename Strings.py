@@ -11,5 +11,5 @@ print(sl)
 
 # Use of lambda in key
 items = [['rice',2.4,8],['flour',1.9,5],['corn',4.7,6]]
-items.sort(key= lambda item: item[1])
+items.sort(key= lambda item: item[0])
 print(items)
