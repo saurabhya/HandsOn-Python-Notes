@@ -2,7 +2,7 @@ class Node:
     def __init__(self, data = None):
         self.data = data
         self.next = None
-    
+
     def __repr__(self):
         return str(self.data)
 
@@ -15,7 +15,7 @@ class Stack:
         node = Node(data)
         if self.top is None:
             self.top = node
-        
+
         else:
             node.next = self.top
             self.top = node
@@ -53,7 +53,6 @@ class TreeNode:
 
     def __repr__(self):
         return str(self.data)
-    
 
 
 expr = "4 5 + 5 3 - *".split()
