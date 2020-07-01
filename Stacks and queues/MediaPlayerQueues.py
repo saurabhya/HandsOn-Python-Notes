@@ -53,22 +53,22 @@ class Queue:
 
 
 '''
-The most music player software allows users to add songs to 
-a playlist. Upon hitting the play button, all the songs in 
-the main playlist are played one after the other. Sequential
-playing of the songs can be implemented with queues because 
-the first song to be queued is the first song that is to be 
-played. This aligns with the FIFO acronym. We will implement 
-our own playlist queue to play songs in the FIFO manner.
+    The most music player software allows users to add songs to
+    a playlist. Upon hitting the play button, all the songs in
+    the main playlist are played one after the other. Sequential
+    playing of the songs can be implemented with queues because
+    the first song to be queued is the first song that is to be
+    played. This aligns with the FIFO acronym. We will implement
+    our own playlist queue to play songs in the FIFO manner.
 
 
-Our media player queue will only allow for the addition of 
-tracks and a way to play all the tracks in the queue. In a 
-full-blown music player, threads would be used to improve 
-how the queue is interacted with, while the music player 
-continues to be used to select the next song to be played, 
-paused, or even stopped. The track class will simulate a 
-musical track.
+    Our media player queue will only allow for the addition of
+    tracks and a way to play all the tracks in the queue. In a
+    full-blown music player, threads would be used to improve
+    how the queue is interacted with, while the music player
+    continues to be used to select the next song to be played,
+    paused, or even stopped. The track class will simulate a
+    musical track.
 '''
 from random import randint
 
@@ -77,14 +77,13 @@ class Track:
         self.title = title
         self.length = randint(5, 10)
         '''
-        Each track holds a reference to the title of the song and also
-        the length of the song. The length of the song is a random number
-        between 5 and 10. The random module in python provides the randint
-        function to enable us to generate the random numbers. The class
-        represents any Mp3 track or file that contains music. The random 
-        length of a track is used to simulate the number of seconds it takes 
-        to play a song or a track.
-
+            Each track holds a reference to the title of the song and also
+            the length of the song. The length of the song is a random number
+            between 5 and 10. The random module in python provides the randint
+            function to enable us to generate the random numbers. The class
+            represents any Mp3 track or file that contains music. The random
+            length of a track is used to simulate the number of seconds it takes
+            to play a song or a track.
         '''
 import time
 class MediaPlayerQueue(Queue):

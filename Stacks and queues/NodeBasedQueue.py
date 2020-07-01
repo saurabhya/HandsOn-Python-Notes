@@ -1,7 +1,7 @@
 '''
-A queue can be implemented using a doubly linked list, and insertion 
-and deletion operations on this data structure, and that has a 
-time complexity of  O(1). 
+    A queue can be implemented using a doubly linked list, and insertion
+    and deletion operations on this data structure, and that has a
+    time complexity of  O(1).
 '''
 
 class Node(object):
