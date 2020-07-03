@@ -1,12 +1,11 @@
 '''
-A graph trversal means to visit all the vertices of the graph, while keeping track of of which nodes or vertices have
-already been visited and which one have not. A graph trversal algorithm is efficient if it traverse all the nodes of
-the graph in the minimal possible time.
+    A graph trversal means to visit all the vertices of the graph, while keeping track of of which nodes or vertices have
+    already been visited and which one have not. A graph trversal algorithm is efficient if it traverse all the nodes of
+    the graph in the minimal possible time.
 
-We have two graph traversal algorithms:
-1. breadth first search (BFS)
-2. depth first-search (DFS)
-
+    We have two graph traversal algorithms:
+    1. breadth first search (BFS)
+    2. depth first-search (DFS)
 '''
 
 ######################################################################################################################
@@ -44,16 +43,15 @@ def breadth_first_search(graph, root):
 print(breadth_first_search(graph, 'A'))
 
 '''
-In the worst case scenario, each vertex or node and the edge will be traversed, thus the time complexity of
-the BFS algorithm is O(|V|+|E|), where |V| is the number of vertices or nodes, while |E| is the number of edges in the graph.
-
+    In the worst case scenario, each vertex or node and the edge will be traversed, thus the time complexity of
+    the BFS algorithm is O(|V|+|E|), where |V| is the number of vertices or nodes, while |E| is the number of edges in the graph.
 '''
 
 #########################################################################################################################################
 # Depth First Seacrh(DFS)
 '''
-As the name suggests, the DFS algorithm traverses the depth of any particular path in the graph before traversing its breadth.
-As such, child nodes are visited first before sibling nodes. The stack data structure is used to implement the DFS algorithm.
+    As the name suggests, the DFS algorithm traverses the depth of any particular path in the graph before traversing its breadth.
+    As such, child nodes are visited first before sibling nodes. The stack data structure is used to implement the DFS algorithm.
 '''
 
 def depth_first_search(graph, root):
@@ -76,7 +74,7 @@ def depth_first_search(graph, root):
             first_adj_node = sorted(remaining_elements)[0]
             graph_stack.append(first_adj_node)
             node = first_adj_node
-    
+
     return visited_vertices
 
 print(depth_first_search(graph,'A'))
