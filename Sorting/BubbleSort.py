@@ -1,8 +1,8 @@
 '''
-The idea behind bubble sort algorithm is very simple. Given an unordered list, we compare adjacent elements in the list, and after
-each comparison, place them in the right order of magnitude. This works by swapping adjacent items if they are not in order.
-The process is repeated for n-1 times for a list of n items.In each such iteration the largest element would be placed at the
-end.
+    The idea behind bubble sort algorithm is very simple. Given an unordered list, we compare adjacent elements in the list, and after
+    each comparison, place them in the right order of magnitude. This works by swapping adjacent items if they are not in order.
+    The process is repeated for n-1 times for a list of n items.In each such iteration the largest element would be placed at the
+    end. The timing complexity for this sort in worst case is O(n^2), which is poorer than some other sophisticated sorting algorithms.
 '''
 def BubbleSort(unordered_list):
     iteration_number = len(unordered_list) -1
