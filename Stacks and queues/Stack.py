@@ -43,14 +43,13 @@ class Stack:
             return None
 
 '''
-Now let us look at an example application showing how we can 
-use our stack implemetation. We are going to write a little 
-function that will verify whether a statement contains 
-brackets - (, [, { - is balanced, that is, whether the number 
-of closng brackets matches the number of opening brackets. 
-It will also ensure that one pair of brackets really is 
-contained in one another. 
-
+    Now let us look at an example application showing how we can 
+    use our stack implemetation. We are going to write a little 
+    function that will verify whether a statement contains 
+    brackets - (, [, { - is balanced, that is, whether the number 
+    of closng brackets matches the number of opening brackets. 
+    It will also ensure that one pair of brackets really is 
+    contained in one another. 
 '''   
 
 def check_brackets(statement):

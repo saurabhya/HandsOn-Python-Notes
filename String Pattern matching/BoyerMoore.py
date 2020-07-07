@@ -1,25 +1,24 @@
 '''
-The Boyer-Moore pattern matching algorithm is another such algorithm that further improves the
-performance of pattern matching by skipping some comparisons using some methods. You need to understand
-the following concepts to be able to use the Boyer-Moore algorithm:
-1. In this algorithm, we shift the pattern in the direction from left to right, similar to the KP algorithm.
-2. We compare the characters of the pattern and the text string from the right to the left direction,
-   which is the opposite of the KMP algorithm.
-3. The algorithm skips the unnecessary comparisons by using the good-suffix and bad-character shifts concept.
+    The Boyer-Moore pattern matching algorithm is another such algorithm that further improves the
+    performance of pattern matching by skipping some comparisons using some methods. You need to understand
+    the following concepts to be able to use the Boyer-Moore algorithm:
+    1. In this algorithm, we shift the pattern in the direction from left to right, similar to the KP algorithm.
+    2. We compare the characters of the pattern and the text string from the right to the left direction,
+       which is the opposite of the KMP algorithm.
+    3. The algorithm skips the unnecessary comparisons by using the good-suffix and bad-character shifts concept.
 
-The Boyer Moore algorithm compares the pattern over the text from right to the left. It uses the information
-of the various possible alignments in the pattern by preprocessing it. the main idea of this algorithm is that
-we compare the end characters of the pattern with the text. If they do not match, then the pattern can be
-moved on further. If the characters do not match in the end, there is no need for further comparisons.
+    The Boyer Moore algorithm compares the pattern over the text from right to the left. It uses the information
+    of the various possible alignments in the pattern by preprocessing it. the main idea of this algorithm is that
+    we compare the end characters of the pattern with the text. If they do not match, then the pattern can be
+    moved on further. If the characters do not match in the end, there is no need for further comparisons.
 
-The Boyer-Moore algorithm has two heuristics to determine the maximum shift possible for the pattern where we find
-a mismatch:
-1. Bad Character Heuristic
-2. Good suffix Heuristic
+    The Boyer-Moore algorithm has two heuristics to determine the maximum shift possible for the pattern where we find
+    a mismatch:
+    1. Bad Character Heuristic
+    2. Good suffix Heuristic
 
-At the time of mismatch, each of these heuristics suggests possible shifts, and the Boyer-Moore algorithm shifts
-the pattern by considering the maximum shift possible due to bad character and good suffix heuristics.
-
+    At the time of mismatch, each of these heuristics suggests possible shifts, and the Boyer-Moore algorithm shifts
+    the pattern by considering the maximum shift possible due to bad character and good suffix heuristics.
 '''
 
 text  = "acbaacacababacacac"
