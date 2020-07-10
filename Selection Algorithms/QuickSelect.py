@@ -1,17 +1,17 @@
 '''
-The quickselect algorithm is used to obtain the kth smallest element in an unordered list of items, and is based on
-quickSort algorithm. In quickSort, we recursively sort the elements of both the sublists from the pivot point.
-In quick sort in each iteration, we know that the pivot value reaches its correct position in the list with two sublists,
-having all of their elements set to be unordered.
+    The quickselect algorithm is used to obtain the kth smallest element in an unordered list of items, and is based on
+    quickSort algorithm. In quickSort, we recursively sort the elements of both the sublists from the pivot point.
+    In quick sort in each iteration, we know that the pivot value reaches its correct position in the list with two sublists,
+    having all of their elements set to be unordered.
 
-However, in case of quickselect algorithm, we recursively call the function exclusively for the sublist that has the kth
-smallest element. In the quickselect algorithm, we compare the index of pivot point with the k value to obtain the kth
-smallest element from the given unordered list. There wil be three cases in the quickselect algorithm :
-1. If the index of the pivot position is smaller than k, then we are sure that kyh smallest value will be present in the right
-   sublist of the pivot point. So, we only recursively call quickselect funtion for the right sub-list.
-2. If the index of the pivot point is greater than k, then it is obvious that the kth smallest element is located in the left
-   sublist. So we only recursively call quickselect algorithm for the left sub-list.
-3. If the index of the pivot point is equal to k, then it means that we have found out the kth smallest element, we return it.
+    However, in case of quickselect algorithm, we recursively call the function exclusively for the sublist that has the kth
+    smallest element. In the quickselect algorithm, we compare the index of pivot point with the k value to obtain the kth
+    smallest element from the given unordered list. There wil be three cases in the quickselect algorithm :
+    1. If the index of the pivot position is smaller than k, then we are sure that kyh smallest value will be present in the right
+       sublist of the pivot point. So, we only recursively call quickselect funtion for the right sub-list.
+    2. If the index of the pivot point is greater than k, then it is obvious that the kth smallest element is located in the left
+       sublist. So we only recursively call quickselect algorithm for the left sub-list.
+    3. If the index of the pivot point is equal to k, then it means that we have found out the kth smallest element, we return it.
 '''
 
 def partition(unsorted_array, first_index, last_index):

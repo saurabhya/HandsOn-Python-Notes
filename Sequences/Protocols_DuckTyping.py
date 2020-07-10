@@ -25,7 +25,7 @@ class FrenchDeck:
 
     """
         The FrenchDeck here takes advantage of many Python facilities because
-        it implements the sequence protocol, even if that is not declared aywhere
+        it implements the sequence protocol, even if that is not declared anywhere
         in the code. We say it is a sequence because it behaves like one,
         and that is what matters. This became known as Duck typing.
 
