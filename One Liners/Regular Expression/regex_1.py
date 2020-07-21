@@ -38,3 +38,14 @@ print(re.findall('y.*y', text))
 """
 print(re.findall('blocks?', text))
 # ['block', 'block', 'blocks']
+
+"""
+    Equipped with these three tools—the dot regex ., the
+    asterisk regex *, and the zero-or-one regex ?—you’re now able
+    to comprehend the next one-liner solution
+"""
+txt = '<div>hello world</div>'
+print(re.findall('<.*>', txt))
+# ['<div>hello world</div>']
+print(re.findall('<.*?>', txt))
+# ['<div>', '</div>']
