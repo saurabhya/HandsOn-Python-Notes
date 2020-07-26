@@ -9,7 +9,7 @@ import re
     is usually immediately followed by an if-statement to test if the search
     succeeded.
 """
-str ="an exmple word:cat!!!"
+str ="an example word:cat!!!"
 match = re.search(r'word:\w\w\w', str)
 
 if match:
@@ -22,21 +22,21 @@ else:
     which passes through backslashes without change which is very handy for
     regular expressions.
 
-    The power of regular expressions id that they can specify patterns
+    The power of regular expressions is that they can specify patterns
     not just fixed characters. Here are the most basic patterns which match
     single chars:
     1. a,X,9 <- ordinary characters just match themselves exactly. The meta-
        characters which do not match themselves because they have special meanings
        are: ^$*+?{[]\|()
     2. . (a period) --  matches any single character except newline '\n'
-    3. \w --  (lowercase w) matches a single "word" charcter:[a-zA-Z0-9_]
+    3. \w --  (lowercase w) matches a single "word" character:[a-zA-Z0-9_]
     4. \b --  boundary between word and non-word
     5. \s --  (lowercase s ) matches a single whitespace character:[\n\t\r\f]
     6. \t,\n,\r --  Tab, newline, return
     7. \d --  decimal digit[0-9]
     8. ^ = start, $ = end
     9. \ --  inhibit the "specialness" of a character. So, for example, use \. for
-        a preriod.
+        a period.
 """
 
 # Some examples
@@ -48,9 +48,9 @@ print(re.search(r'\d\d\d', 'p123g'))
 print(re.search(r'\w\w\w', '@@abcd!!'))
 
 """
-    Things get more intersting when you use + and * specify repetition in the pattern
-    1. + -- 1 or more ocurences
-    2. * -- 0 or more occurences
+    Things get more interesting when you use + and * specify repetition in the pattern
+    1. + -- 1 or more occurrences
+    2. * -- 0 or more occurrences
     3. ? -- match 0 or 1 occurrences of the pattern
 
 
@@ -77,13 +77,13 @@ if match:
 
 
 """
-    Square brackts can be used to indicate a set of chars, so [abc] matches
+    Square brackets can be used to indicate a set of chars, so [abc] matches
     'a' or 'b' or 'c'. The codes \w, \s etc. work inside square brackets too
     with the one exception that dot(.) just means a literal dot. For the email
     problem, the square brackets are an easy way to add '.' and '-' to the set
     of chars which can appear around the @ with the pattern r'[\w._]+@[\w.-]+'
     to get the whole email address.
 """
-match = re.search(r'[\w.-]+@[\w.-]+', str)
+match = re.search(r'[\w.-]+@[\w-]+[.]\w+', str)
 if match:
     print(match.group())

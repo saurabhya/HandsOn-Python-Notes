@@ -1,14 +1,14 @@
 """
     The "group" feature of a regular expression allows you to pick out parts
     of the matching text. Suppose for the emails problem that we want to
-    extract the username and host separately. To do this,add paranthesis()
+    extract the username and host separately. To do this,add parenthesis()
     around the username and host in the pattern, like this: r'([\w.-]+)@([\w.-]+)'.
-    In this case, the paranthesis do not change what the pattern will match,
+    In this case, the parenthesis do not change what the pattern will match,
     instead they establish logical "groups" inside of the match text.
     On a successful search, match.group(1) is the match text corresponding to the
-    1st left paranthesis, and match.group(2) is the text corresponding to the
-    2nd left paranthesis. The plain match.group() is still the whole match text
-    as ususal.
+    1st left parenthesis, and match.group(2) is the text corresponding to the
+    2nd left parenthesis. The plain match.group() is still the whole match text
+    as usual.
 """
 import re
 
@@ -20,14 +20,12 @@ if match:
 
 """
     A common workflow with regular expression is that you write a pattern for the
-    thing you are looking for, adding paranthesis groups to extract the parts you want.
-"""
+    thing you are looking for, adding parenthesis groups to extract the parts you want.
 
 
-"""
     findall()
         findall() is probably the single most powerful function in the re module.
-        Above we used re.seacrh() to find the first match for a pattern.
+        Above we used re.search() to find the first match for a pattern.
         findall() finds *all* the matches and returns them as a list of strings,
         with each string representing one match.
 """
@@ -49,17 +47,17 @@ for email in emails:
 """
 
 
-f = open('Regular Expression/test.txt','r')
+f = open('test.txt','r')
 strings = re.findall(r'some pattern', f.read())
 for string in strings:
     print(string)
 
 """
     The paranthesis() group mechanism can be combined with findall().
-    If the pattern includes 2 or more paranthesis groups, then instead of returning
+    If the pattern includes 2 or more parenthesis groups, then instead of returning
     a list of strings, findall() returns a list of *tuples*. Each tuple represents
     one match of the pattern, and inside the tuple is the group(1), group(2).. data.
-    So if 2 paranthesis groups are added to the email pattern, then findall()
+    So if 2 parenthesis groups are added to the email pattern, then findall()
     returns a list of tuples, each length 2 containing the username and host.
 """
 
