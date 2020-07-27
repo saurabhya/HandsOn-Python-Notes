@@ -1,6 +1,6 @@
-Hello world!!!
-My name is Dwight Shrute.
+Hello World!
 
-I work at Dunder Mifflin.
-I am a work as a salesman.
-We sell paper.
+My name is Dwight Schrute
+I work at Dunder Mifflin Paper Company
+I am a salesman, I recently won the best salesman of the year award.
+ 
