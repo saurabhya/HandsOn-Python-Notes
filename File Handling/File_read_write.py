@@ -28,3 +28,42 @@ with open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Han
 
 with open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Handling\\test.txt', 'r') as reader:
     print(reader.readlines())
+
+# The above example can be done using list() to create a list out of the file object:
+f = open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Handling\\test.txt', 'r')
+print(list(f))
+f.close()
+
+
+'''
+    Iterating over each in the file
+
+    A common thing to do while reading a file is to iterate over each line. Here's an example of how to use the Python .readline()
+    method to perform that iteration.
+    
+'''
+with open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Handling\\test.txt', 'r') as reader:
+    # read and print entire file line by line
+    line = reader.readline()
+    while line!= '':
+        print(line, end='')
+        line = reader.readline()
+'''
+     Another way you could iterate over each line in this file is to use the Python .readlines() method of the file object.
+     Remember, .readlines() returns a list where each element in the list represents a line in the file:
+'''
+
+with open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Handling\\test.txt', 'r') as reader:
+    for line in reader.readlines():
+        print(line, end="")
+
+'''
+    Now let's dive into writing files. As with reading files, file objects have multiple methods that are useful for writing to a file:
+
+    Method                              What it does
+-----------------------------------------------------------------------------------------------------------------------------------
+    .write()                              This write the string to the file
+    .writelines(seq)                      This writes the sequence to the file. No line endings are appended to each sequence item.
+'''
+
+
