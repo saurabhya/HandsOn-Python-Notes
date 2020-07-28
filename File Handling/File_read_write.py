@@ -5,7 +5,7 @@
     Method                |      What It Does
 --------------------------|------------------------------------------------------------------------------------------------------------------------------
     .read(size=-1)        |      This reads from the file based on the number of size bytes. If no argument is passed or None or -1 is passed, then the entire file is read.
-    .readline(size =-1)  |      This reads at most size number of characters from the line. This continues to the end of the line and then wraps back around. If no argument is passed or None or -1 is passed, then the entire line is read.
+    .readline(size =-1)   |      This reads at most size number of characters from the line. This continues to the end of the line and then wraps back around. If no argument is passed or None or -1 is passed, then the entire line is read.
     .readlines()          |      This reads the remaining lines from the file object and returns them as a list.
 '''
 with open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Handling\\test.txt', 'r') as reader:
@@ -65,5 +65,4 @@ with open('C:\\Users\\Saurabh\\Documents\\Github\\HandsOn-Python-Notes\\File Han
     .write()                              This write the string to the file
     .writelines(seq)                      This writes the sequence to the file. No line endings are appended to each sequence item.
 '''
-
 
