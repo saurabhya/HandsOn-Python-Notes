@@ -14,7 +14,7 @@
 
     The heaps are binary trees, and although we are going to use a binary tree, we will actually use a list to represent it.
     For the ease of implementation we will be ignoring index 0.
-    In heap, you can retrieve the hildren of any node at the n index very easily. The left child id located at 2n, and the
+    In heap, you can retrieve the children of any node at the n index very easily. The left child id located at 2n, and the
     right child is located at 2n+1. This will always hold true.
 
     Now we will see the implementation of min heap.
@@ -42,8 +42,8 @@ class Heap:
         self.arrange(self.size)
 
     '''
-        The pop operation operation removes an element from the heap. The reason for removing an element from the min-heap is,
-        first , to find out the index of the item to be deleted, and then organise the heap so that it satisfies the heap property.
+        The pop operation removes an element from the heap. The reason for removing an element from the min-heap is,
+        first, to find out the index of the item to be deleted, and then organise the heap so that it satisfies the heap property.
         however, it is more common to pop off the minimum value from the min heap, and as per the property of the min-heap,
         we can get the minimum value from its root value. Therefore to obtain minimum value, we remove the root node and
         re-organise all the nodes of the heap. We also decrement the size of the heap by one.
