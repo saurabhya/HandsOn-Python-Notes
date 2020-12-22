@@ -1,7 +1,7 @@
 """
-    A registration decorator is a good enhancement to the ecommerce promotional discount from design patterns and strategies
+    A registration decorator is a good enhancement to the e-commerce promotional discount from design patterns and strategies
     In our previous strategy we had separate function definitions for different promo type and then promos list was used by
-    best_promo function to determine the highestdiscount applicable. The repetition is problemetic because someone may add
+    best_promo function to determine the highest discount applicable. The repetition is problematic because someone may add
     a new promotional strategy function and forget to manually add it to the promos list - in which case, best_promo will
     silently ignore the new strategy, introducing a subtle bug in the system.
 """
